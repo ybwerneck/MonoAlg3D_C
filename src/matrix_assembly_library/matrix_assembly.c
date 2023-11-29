@@ -106,6 +106,8 @@ ASSEMBLY_MATRIX(random_sigma_discretization_matrix) {
     real sigma_z = 0.0;
     GET_PARAMETER_NUMERIC_VALUE_OR_REPORT_ERROR(real, sigma_z, config, "sigma_z");
 
+
+
     srand((unsigned int)time(NULL));
 
     real_cpu modifiers[4] = {0.0f, 0.1f, 0.5f, 1.0f};

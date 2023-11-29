@@ -2,9 +2,9 @@
 
 FIND_CUDA () {
 	#CUDA RELATED VARIABLES
-	CUDA_LIBRARY_PATH=""
-	CUDA_INCLUDE_PATH=""
-	NVCC=""
+	CUDA_LIBRARY_PATH="/usr/local/cuda/lib64/"
+	CUDA_INCLUDE_PATH="/usr/local/cuda/include/"
+	NVCC="/usr/local/cuda/bin/nvcc"
 	CUDA_FOUND=""
 
 	if [ -z "$CUDA_LIBRARY_PATH" ]; then
