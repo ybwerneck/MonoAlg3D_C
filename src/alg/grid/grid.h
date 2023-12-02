@@ -39,6 +39,8 @@ struct grid {
 
     struct point_3d start_discretization;
     struct point_3d max_discretization;
+
+    int number_layers_border_zone;
 };
 
 struct grid* new_grid();

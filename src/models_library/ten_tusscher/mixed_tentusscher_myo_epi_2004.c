@@ -14,7 +14,6 @@ SET_ODE_INITIAL_CONDITIONS_CPU(set_model_initial_conditions_cpu)
 {
 
     log_info("Using mixed version of TenTusscher 2004 myocardium + epicardium CPU model\n");
-
     // Get the mapping array
     uint32_t *mapping = NULL;
     if(solver->ode_extra_data)

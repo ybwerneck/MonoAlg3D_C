@@ -7,6 +7,7 @@
 struct default_fibrotic_mesh_info {
     bool fibrotic;
     bool border_zone;
+    int layer_border_zone;
     int tissue_type;
 };
 
@@ -26,6 +27,7 @@ struct dti_mesh_info {
 #define FIBROTIC(grid_cell) (FIBROTIC_INFO(grid_cell))->fibrotic
 #define BORDER_ZONE(grid_cell) (FIBROTIC_INFO(grid_cell))->border_zone
 #define TISSUE_TYPE(grid_cell) (FIBROTIC_INFO(grid_cell))->tissue_type
+#define LAYER_BORDER_ZONE(grid_cell) (FIBROTIC_INFO(grid_cell))->layer_border_zone
 
 #define INITIALIZE_FIBROTIC_INFO(grid_cell)                                                                            \
     do {                                                                                                               \
@@ -35,9 +37,10 @@ struct dti_mesh_info {
         FIBROTIC ((grid_cell)) = false;                                                                                \
         BORDER_ZONE (grid_cell) = false;                                                                               \
         TISSUE_TYPE ((grid_cell)) = 0;                                                                                 \
+        LAYER_BORDER_ZONE ((grid_cell)) = 0;                                                                                 \
 } while (0)
 
-#define INITIALIZE_DTI_MESH_INFO(grid_cell) ALLOCATE_MESH_INFO(grid_cell, dti_mesh_info);   
+#define INITIALIZE_DTI_MESH_INFO(grid_cell) ALLOCATE_MESH_INFO(grid_cell, dti_mesh_info)   
 #define DTI_MESH_INFO(grid_cell) (struct dti_mesh_info *)grid_cell->mesh_extra_info
 #define DTI_MESH_TRANSMURALITY_LABELS(grid_cell) (DTI_MESH_INFO(grid_cell))->dti_transmurality_labels
 #define DTI_MESH_TRANSMURALITY(grid_cell) (DTI_MESH_INFO(grid_cell))->transmurality

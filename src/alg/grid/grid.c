@@ -20,6 +20,7 @@ struct grid *new_grid() {
     result->refined_this_step = NULL;
     result->free_sv_positions = NULL;
     result->num_active_cells = result->number_of_cells = 0;
+    result->number_layers_border_zone = 0;
 
     arrsetcap(result->refined_this_step, 128);
     arrsetcap(result->free_sv_positions, 128);
