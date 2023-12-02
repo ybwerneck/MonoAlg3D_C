@@ -5,4 +5,4 @@ Para rodar o protocolo em batch com sigma e factor parametrizados
 
 
 Para rodar o batch padrao do monoalg
-ssmpirun -np 1 bin/MonoAlg3D_batch -c deploy_batch_monoalg/batch.ini 
+mpirun -np 1 bin/MonoAlg3D_batch -c deploy_batch_monoalg/batch.ini 
