@@ -1,0 +1,3 @@
+Sigma_Factor,Sigma,Stimulation_Index,Interval,Element_Reentry_Rate,Element_Block_Rate,Element_Normal_Rate,Event_Type
+[0.6],0.0
+0.6,0.0,2,380,0.0,98.38924387646432,1.6107561235356762,Bloqueio
